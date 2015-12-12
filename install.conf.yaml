@@ -1,9 +1,8 @@
 - clean: ['~']
 
 - link:
-    ~/.config/fontconfig/conf.d:
-      path: fonts.conf.d
-      create: true
+    ~/.bashrc:
+      path: bash-configs/bashrc.sh
     ~/.fonts:
       path: fonts/
       relink: true
