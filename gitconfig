@@ -1,6 +1,6 @@
 [user]
-  name = TravisYoes
-  email = git@travisyoes.com
+  name = travis@jumpcloud.com
+  email = travis@jumpcloud.com
 [color]
   branch = auto
   diff = auto
@@ -18,6 +18,8 @@
   added = yellow
   changed = green
   untracked = cyan
+[credential]
+  helper = cache
 [merge]
   tool = vimdiff
 	conflictstyle = diff3

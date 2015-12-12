@@ -11,7 +11,6 @@
     ~/.lessrc: lessrc
     ~/.ssh/rc: ssh_rc
     ~/.ssh/.xinitrc: xinitrc
-      relink: true
     ~/.vimrc: vimrc
     ~/.vim:
       path: vim/

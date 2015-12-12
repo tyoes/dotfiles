@@ -27,13 +27,9 @@ Plugin 'fatih/vim-go'	"Run :GoInstallBinaries to pull down dependencies.
 			"Requires modifying gitconfig https rewrite.
 Plugin 'scrooloose/nerdtree' "File Browser
 Plugin 'jistr/vim-nerdtree-tabs' "Same nerdtree in every file
-Plugin 'scrooloose/syntastic' "Display where errors and warnings occur
-Plugin 'jaxbot/syntastic-react' "Syntax checking for React
-Plugin 'Raimondi/delimitMate' " Autoclose quotes and groupings ()
 Plugin 'bling/vim-airline' "Style the status bar
 Plugin 'Shougo/neocomplete.vim' "Auto word completions
 Plugin 'janko-m/vim-test' "Execute tests from inside vim
-Plugin 'tmux-plugins/vim-tmux-focus-events' "makes tmux + vim work with focus events
 
 "Plugin 'ciaranm/detectindent'
 " All of your Plugins must be added before the following line
