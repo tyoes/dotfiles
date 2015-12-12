@@ -10,7 +10,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim' "Package manager
 Plugin 'pangloss/vim-javascript' "Better Javascript syntax highlighting (Required by react)
-Plugin 'mxw/vim-jsx' "JSX support (React)
 Plugin 'kchmck/vim-coffee-script' "Coffeescript support
 Plugin 'puppetlabs/puppet-syntax-vim' "Puppet support
 Plugin 'saltstack/salt-vim' "Salt Syntax Support
@@ -30,7 +29,7 @@ call vundle#end()            " required
 " Put your non-Plugin stuff after this line
 
 " Syntax highlighting
-syntax on
+syntax enable
 
 " Loading the indent file for specific file types
 filetype plugin indent on
@@ -55,7 +54,6 @@ set listchars=tab:▸\ ,eol:¬
 nnoremap <silent> <leader>> :vertical resize 123<CR> "Automatically resize split to fit 120 chars
 
 autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown " .md == markdown. .md != modula-2
-
 
 " ----- mattn/emmet-vim settings -----
 "let g:user_emmet_install_global = 0
