@@ -1,6 +1,6 @@
 [user]
-  name = Mike Kusold
-  email = git@mikekusold.com
+  name = TravisYoes
+  email = git@travisyoes.com
 [color]
   branch = auto
   diff = auto
@@ -45,7 +45,7 @@
   st = status
   br = branch
   ch = cherry -v origin
-  mine = log --author=Mike
+  mine = log --author=tyoes
   spull = !git svn fetch && git svn rebase
   spush = !git svn dcommit
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short

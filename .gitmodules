@@ -1,15 +1,9 @@
 [submodule "prezto"]
 	path = prezto
 	url = https://github.com/sorin-ionescu/prezto.git
-[submodule "ansiweather"]
-	path = ansiweather
-	url = https://github.com/fcambus/ansiweather.git
 [submodule "vim/bundle/Vundle.vim"]
 	path = vim/bundle/Vundle.vim
 	url = https://github.com/gmarik/Vundle.vim
-[submodule "tmux/plugins/tpm"]
-	path = tmux/plugins/tpm
-	url = git@github.com:tmux-plugins/tpm.git
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
