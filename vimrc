@@ -34,7 +34,7 @@ syntax enable
 " Loading the indent file for specific file types
 filetype plugin indent on
 
-set number " Line numbering on
+" set number " Line numbering on
 set showmatch " Show matching brackets/parenthesis
 set tabstop=4 "Tabs take up 4 spaces
 "set shiftwidth=2
