@@ -26,13 +26,17 @@ if [ -f $HOME/.bashrc_private ]; then
 fi
 
 # user-specific aliases and functions
-alias ll='ls -laF'
-alias sl='ls'
+alias ls='ls -laF'
+alias sl='ls -laF'
+alias sls='ls -laF'
 alias vi='vim'
+alias ci='vim'
 alias wget='curl -O'
 alias jump='cd ~/workspace/JumpCloud'
 alias gojump='cd ~/gopath/src/github.com/TheJumpCloud'
 alias work='cd ~/workspace'
+alias down='cd ~/Downloads'
+alias temp='cd ~/temp'
 alias mykey='cat ~/.ssh/id_rsa.pub'
 alias sshtunnel='~/scripts/bash/sshTunnel.sh'
 alias looptrue='sudo losetup -f /hdd/storage/truecrypt_storage'
