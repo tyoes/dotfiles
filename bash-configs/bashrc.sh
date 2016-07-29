@@ -26,40 +26,49 @@ if [ -f $HOME/.bashrc_private ]; then
 fi
 
 # user-specific aliases and functions
-alias ls='ls -laF'
-alias sl='ls -laF'
-alias sls='ls -laF'
+alias sl='ls'
+alias sls='ls'
+alias ll='ls -laF'
 alias vi='vim'
 alias ci='vim'
+alias bi='vim'
 alias wget='curl -O'
-alias jump='cd ~/workspace/JumpCloud'
-alias gojump='cd ~/gopath/src/github.com/TheJumpCloud'
-alias work='cd ~/workspace'
-alias down='cd ~/Downloads'
-alias temp='cd ~/temp'
-alias mykey='cat ~/.ssh/id_rsa.pub'
-alias sshtunnel='~/scripts/bash/sshTunnel.sh'
+alias jump='cd $JUMPCLOUD_WORKSPACE'
+alias gojump='cd $GOPATH/src/github.com/TheJumpCloud'
+alias work='cd $WORKSPACE'
+alias down='cd $HOME/Downloads'
+alias temp='cd $HOME/temp'
+alias mykey='cat $HOME/.ssh/id_rsa.pub'
 alias looptrue='sudo losetup -f /hdd/storage/truecrypt_storage'
-alias get-agents='scp travis@staging.jumpcloud.com:/opt/provisioning-server/files/* ~/workspace/JumpCloud/SI/agent-files/'
+alias sublime='$HOME/devtools/sublime_text_3/sublime_text'
 
 # conditional alias for adding id_rsa to agent
-ssh-add -l >/dev/null || alias ssh='ssh-add -l >/dev/null || ssh-add ~/.ssh/id_rsa && unalias ssh; ssh'
+ssh-add -l >/dev/null || alias ssh='ssh-add -l >/dev/null || ssh-add $HOME/.ssh/id_rsa && unalias ssh; ssh'
 
 # user-specific local db aliases
+alias sudo='sudo '
 alias startldap='systemctl start slapd.service'
 alias startsql='sudo service mysqld start'
 alias startpostgres='sudo systemctl start postgresql'
-alias startmongo='mongod --bind_ip localhost --dbpath "/home/tyoes/devtools/mongodb/" --nojournal --noprealloc --nohttpinterface'
-alias repairmongo='mongod --bind_ip localhost --dbpath "/home/tyoes/devtools/mongodb/" --nojournal --noprealloc --nohttpinterface --repair'
+alias startmongo='mongod --bind_ip localhost --dbpath "$HOME/devtools/mongodb/" --nojournal --noprealloc --nohttpinterface'
+alias repairmongo='mongod --bind_ip localhost --dbpath "$HOME/devtools/mongodb/" --nojournal --noprealloc --nohttpinterface --repair'
 
 # docker aliases
-alias docker-workstation='cd ~/workspace/JumpCloud/jumpcloud-workstation;docker-compose up'
+alias docker-workstation='cd $WORKSPACE/JumpCloud/jumpcloud-workstation;docker-compose up'
+alias docker-webui='cd $WORKSPACE/JumpCloud/SI;docker-compose up webui'
+alias docker-si='cd $WORKSPACE/JumpCloud/SI;docker-compose up'
+alias docker-clean='cd $WORKSPACE/JumpCloud/jumpcloud-workstation;docker-compose rm -f mongo redis;cd $WORKSPACE/JumpCloud/SI;docker-compose rm -f webui agent kickstart worker;cd $GOPATH/src/github.com/TheJumpCloud/jumpcloud-ldapsync;docker-compose rm -f ldap'
+alias docker-clean-ldap='cd $GOPATH/src/github.com/TheJumpCloud/jumpcloud-ldapsync;docker-compose rm -f ldap'
+alias docker-ldap='cd $GOPATH/src/github.com/TheJumpCloud/jumpcloud-ldapsync;docker-compose up ldap'
 
 # The next line updates PATH for the Google Cloud SDK.
-source '/home/tyoes/devtools/google-cloud-sdk/path.bash.inc'
+source '$HOME/devtools/google-cloud-sdk/path.bash.inc'
 
 # The next line enables shell command completion for gcloud.
-source '/home/tyoes/devtools/google-cloud-sdk/completion.bash.inc'
+source '$HOME/devtools/google-cloud-sdk/completion.bash.inc'
 
 # The next line enables bash completion for gcloud.
-source '/home/tyoes/devtools/google-cloud-sdk/completion.bash.inc'
+source '$HOME/devtools/google-cloud-sdk/completion.bash.inc'
+
+# Necessary for the grpc node_module to run
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib
