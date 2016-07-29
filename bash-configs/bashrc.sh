@@ -33,8 +33,6 @@ alias vi='vim'
 alias ci='vim'
 alias bi='vim'
 alias wget='curl -O'
-alias jump='cd $JUMPCLOUD_WORKSPACE'
-alias gojump='cd $GOPATH/src/github.com/TheJumpCloud'
 alias work='cd $WORKSPACE'
 alias down='cd $HOME/Downloads'
 alias temp='cd $HOME/temp'
@@ -52,14 +50,6 @@ alias startsql='sudo service mysqld start'
 alias startpostgres='sudo systemctl start postgresql'
 alias startmongo='mongod --bind_ip localhost --dbpath "$HOME/devtools/mongodb/" --nojournal --noprealloc --nohttpinterface'
 alias repairmongo='mongod --bind_ip localhost --dbpath "$HOME/devtools/mongodb/" --nojournal --noprealloc --nohttpinterface --repair'
-
-# docker aliases
-alias docker-workstation='cd $WORKSPACE/JumpCloud/jumpcloud-workstation;docker-compose up'
-alias docker-webui='cd $WORKSPACE/JumpCloud/SI;docker-compose up webui'
-alias docker-si='cd $WORKSPACE/JumpCloud/SI;docker-compose up'
-alias docker-clean='cd $WORKSPACE/JumpCloud/jumpcloud-workstation;docker-compose rm -f mongo redis;cd $WORKSPACE/JumpCloud/SI;docker-compose rm -f webui agent kickstart worker;cd $GOPATH/src/github.com/TheJumpCloud/jumpcloud-ldapsync;docker-compose rm -f ldap'
-alias docker-clean-ldap='cd $GOPATH/src/github.com/TheJumpCloud/jumpcloud-ldapsync;docker-compose rm -f ldap'
-alias docker-ldap='cd $GOPATH/src/github.com/TheJumpCloud/jumpcloud-ldapsync;docker-compose up ldap'
 
 # The next line updates PATH for the Google Cloud SDK.
 source '$HOME/devtools/google-cloud-sdk/path.bash.inc'
