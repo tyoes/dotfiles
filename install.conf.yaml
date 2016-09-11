@@ -3,6 +3,12 @@
 - link:
     ~/.bashrc:
       path: bash-configs/bashrc.sh
+    ~/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap:
+      path: sublime-configs/Default (Linux).sublime-keymap
+      relink: true
+    ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings:
+      path: sublime-configs/Preferences.sublime-settings
+      relink: true
     ~/.fonts:
       path: fonts/
       relink: true
