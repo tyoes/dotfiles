@@ -64,3 +64,6 @@ alias startsql='sudo service mysqld start'
 alias startpostgres='sudo systemctl start postgresql'
 alias startmongo='mongod --bind_ip localhost --dbpath "$DEVTOOLS/mongodb/" --nojournal --noprealloc --nohttpinterface'
 alias repairmongo='mongod --bind_ip localhost --dbpath "$DEVTOOLS/mongodb/" --nojournal --noprealloc --nohttpinterface --repair'
+
+# program-specific aliases
+alias startbrowsersync='browser-sync start --server --directory --files *'
