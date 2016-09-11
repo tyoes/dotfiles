@@ -37,7 +37,7 @@ export GOOS=linux
 export CGO_ENABLED=1
 export JAVA_HOME="/usr/lib/jvm/jdk"
 
-export PATH=$JAVA_HOME/$GOROOT/bin:$GOPATH/bin:$DEVTOOLS/mongodb/bin:$HOME/.rbenv/bin:$PATH
+export PATH=$JAVA_HOME/bin:$GOROOT/bin:$GOPATH/bin:$DEVTOOLS/mongodb/bin:$HOME/.rbenv/bin:$PATH
 
 # user-specific aliases and functions
 alias ls='ls -laF'
