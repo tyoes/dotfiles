@@ -38,7 +38,7 @@ alias down='cd $HOME/Downloads'
 alias temp='cd $HOME/temp'
 alias mykey='cat $HOME/.ssh/id_rsa.pub'
 alias looptrue='sudo losetup -f /hdd/storage/truecrypt_storage'
-alias sublime='$HOME/devtools/sublime_text_3/sublime_text'
+alias sublime='/opt/sublime_text/sublime_text %F'
 
 # conditional alias for adding id_rsa to agent
 ssh-add -l >/dev/null || alias ssh='ssh-add -l >/dev/null || ssh-add $HOME/.ssh/id_rsa && unalias ssh; ssh'
