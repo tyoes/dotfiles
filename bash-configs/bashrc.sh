@@ -25,10 +25,24 @@ if [ -f $HOME/.bashrc_private ]; then
     . $HOME/.bashrc_private
 fi
 
+# location env variables
+export DEVTOOLS="$HOME/devtools"
+export WORKSPACE="$HOME/workspace"
+
+# language env variables
+export GOROOT="/usr/local/go"
+export GOPATH="$WORKSPACE/gopath"
+export GOARCH=amd64
+export GOOS=linux
+export CGO_ENABLED=1
+export JAVA_HOME="/usr/lib/jvm/jdk"
+
+export PATH=$JAVA_HOME/$GOROOT/bin:$GOPATH/bin:$DEVTOOLS/mongodb/bin:$HOME/.rbenv/bin:$PATH
+
 # user-specific aliases and functions
-alias sl='ls'
-alias sls='ls'
-alias ll='ls -laF'
+alias ls='ls -laF'
+alias sl='ls -laF'
+alias sls='ls -laF'
 alias vi='vim'
 alias ci='vim'
 alias bi='vim'
@@ -48,17 +62,5 @@ alias sudo='sudo '
 alias startldap='systemctl start slapd.service'
 alias startsql='sudo service mysqld start'
 alias startpostgres='sudo systemctl start postgresql'
-alias startmongo='mongod --bind_ip localhost --dbpath "$HOME/devtools/mongodb/" --nojournal --noprealloc --nohttpinterface'
-alias repairmongo='mongod --bind_ip localhost --dbpath "$HOME/devtools/mongodb/" --nojournal --noprealloc --nohttpinterface --repair'
-
-# The next line updates PATH for the Google Cloud SDK.
-source '$HOME/devtools/google-cloud-sdk/path.bash.inc'
-
-# The next line enables shell command completion for gcloud.
-source '$HOME/devtools/google-cloud-sdk/completion.bash.inc'
-
-# The next line enables bash completion for gcloud.
-source '$HOME/devtools/google-cloud-sdk/completion.bash.inc'
-
-# Necessary for the grpc node_module to run
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib
+alias startmongo='mongod --bind_ip localhost --dbpath "$DEVTOOLS/mongodb/" --nojournal --noprealloc --nohttpinterface'
+alias repairmongo='mongod --bind_ip localhost --dbpath "$DEVTOOLS/mongodb/" --nojournal --noprealloc --nohttpinterface --repair'

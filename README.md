@@ -5,7 +5,7 @@ personal dotfile repository. many tools blatantly stolen from my coworker, mike 
 these use [dotbot](https://github.com/anishathalye/dotbot) to manage symlinks. dotbot is written in python, so it should work cross platform without any issues.
 
 ### applying the symlinks
-`$ ./bin/dotfile-install`
+`$ ./dotfile-install`
 
 ## external dependencies
 * [prezto](https://github.com/sorin-ionescu/prezto) - makes zsh prettier and more useful
@@ -13,4 +13,4 @@ these use [dotbot](https://github.com/anishathalye/dotbot) to manage symlinks. d
 * [dotbot](https://github.com/anishathalye/dotbot) - symlink manager for dotfiles
 
 ## terminal colors
-the excellent [base16](https://github.com/chriskempson/base16) package for colors. my current theme is [eighties](http://chriskempson.github.io/base16/#eighties)
+the excellent [base16](https://github.com/chriskempson/base16) package for colors. 
