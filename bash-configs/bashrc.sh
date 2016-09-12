@@ -7,6 +7,9 @@ case $TERM in
         ;;
 esac
 
+#force load of ssh-agent
+eval $(ssh-agent)
+
 # improved history
 export HISTFILESIZE=50000
 export HISTSIZE=10000
